@@ -4,16 +4,23 @@ import InlineEditForm from "./InlineEditForm";
 export default class InlineEditFieldTransformer {
 
     /**
-     * @param {string} value
+     * @param {string} _value
+     * @param {null} _
+     * @param {Object} row
+     * @param {string} row.translation
+     * @param {number} row.id
+     * @param {string} row.locale
+     * @param {string} row.translationKey
      * @returns {React.Element}
      */
-    transform(value) {
-        const [translationId, translationValue] = value.split(';', 2);
-
+    transform(_value, _, row) {
         return (
-            <div>
-                <InlineEditForm value={translationValue} translationId={translationId}/>
-            </div>
+            <InlineEditForm
+                value={row.translation}
+                translationId={row.id}
+                locale={row.locale}
+                translationKey={row.translationKey}
+            />
         );
     }
 }
