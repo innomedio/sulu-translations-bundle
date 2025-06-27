@@ -142,6 +142,12 @@ bin/console cache:clear
 bin/websiteconsole cache:clear
 ```
 
+## Sulu AI
+
+Using AI to autocomplete missing translations is a real time-saver and can help you to quickly fill in the gaps in your translations.
+
+If you are using the Sulu AI bundle or platform, you can use the AI translation feature to automatically translate your content.
+This feature is automatically enabled if you have the Sulu AI bundle installed and configured.
 
 ## Known limitations
 
