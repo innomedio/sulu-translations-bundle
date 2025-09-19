@@ -32,3 +32,18 @@ You can do this with the following SQL command:
 ```sql
 ALTER TABLE tailr_translations RENAME TO phpro_translations;
 ```
+
+## 5. Rebuild admin
+
+Make sure that the package.json and lock file contains links to phpro instead of tailrdigital.
+Rebuild the Sulu admin to ensure all changes are applied:
+
+```sh
+bin/console sulu:admin:build
+```
+
+## 6. Reactivate permissions
+
+Make sure you've set the correct permissions in the Sulu admin for this package.
+Go to Settings > User Roles and enable the permissions (phpro_translations) you need.
+Afterwards you could find the translations view/panel via Settings > Manage translations.
