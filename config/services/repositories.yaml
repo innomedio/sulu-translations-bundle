@@ -1,6 +1,6 @@
 services:
-  Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Repository\DoctrineTranslationRepository:
+  Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Repository\DoctrineTranslationRepository:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager'
-      - '@Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Mapper\TranslationMapper'
-  Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository: '@Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Repository\DoctrineTranslationRepository'
+      - '@Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager'
+      - '@Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Mapper\TranslationMapper'
+  Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository: '@Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Repository\DoctrineTranslationRepository'

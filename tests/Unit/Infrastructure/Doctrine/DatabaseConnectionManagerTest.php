@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Infrastructure\Doctrine;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Infrastructure\Doctrine;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\Persistence\ManagerRegistry;
+use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProviderFactory;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Symfony\Component\Translation\Provider\ProviderInterface;
 use Symfony\Component\Translation\Provider\TranslationProviderCollection;
-use Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProviderFactory;
 
 class DatabaseConnectionManagerTest extends TestCase
 {

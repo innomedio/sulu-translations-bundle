@@ -1,11 +1,11 @@
 services:
-  Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Schema\SetupTranslationsTable:
+  Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Schema\SetupTranslationsTable:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager'
+      - '@Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager'
 
-  Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Mapper\TranslationMapper: ~
+  Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Mapper\TranslationMapper: ~
 
-  Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager:
+  Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager:
     arguments:
       - '@translation.provider_collection'
       - '@Doctrine\Persistence\ManagerRegistry'

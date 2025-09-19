@@ -1,2 +1,2 @@
 services:
-  Tailr\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer: ~
+  Phpro\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer: ~

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Infrastructure\Translation\Provider;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Infrastructure\Translation\Provider;
 
+use Phpro\SuluTranslationsBundle\Domain\Command\DeleteCommand;
+use Phpro\SuluTranslationsBundle\Domain\Command\DeleteHandler;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Remover;
+use Phpro\SuluTranslationsBundle\Tests\Fixtures\TranslationBags;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
-use Tailr\SuluTranslationsBundle\Domain\Command\DeleteCommand;
-use Tailr\SuluTranslationsBundle\Domain\Command\DeleteHandler;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Remover;
-use Tailr\SuluTranslationsBundle\Tests\Fixtures\TranslationBags;
 
 class RemoverTest extends TestCase
 {

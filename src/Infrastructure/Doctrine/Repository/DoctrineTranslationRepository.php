@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Repository;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Repository;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Query\QueryBuilder;
-use Tailr\SuluTranslationsBundle\Domain\Exception\TranslationNotFoundException;
-use Tailr\SuluTranslationsBundle\Domain\Model\Translation;
-use Tailr\SuluTranslationsBundle\Domain\Model\TranslationCollection;
-use Tailr\SuluTranslationsBundle\Domain\Query\SearchCriteria;
-use Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
-use Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager;
-use Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Mapper\TranslationMapper;
-use Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Schema\TranslationTable;
+use Phpro\SuluTranslationsBundle\Domain\Exception\TranslationNotFoundException;
+use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
+use Phpro\SuluTranslationsBundle\Domain\Model\TranslationCollection;
+use Phpro\SuluTranslationsBundle\Domain\Query\SearchCriteria;
+use Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
+use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager;
+use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Mapper\TranslationMapper;
+use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Schema\TranslationTable;
 
 use function Psl\Str\lowercase;
 use function Psl\Vec\map;

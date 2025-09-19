@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Mapper;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Mapper;
 
-use Tailr\SuluTranslationsBundle\Domain\Model\DateTimeType;
-use Tailr\SuluTranslationsBundle\Domain\Model\Translation;
+use Phpro\SuluTranslationsBundle\Domain\Model\DateTimeType;
+use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
 
 use function Psl\Type\int;
 use function Psl\Type\nullable;
@@ -32,23 +32,23 @@ class TranslationMapper
     public function fromDb(array $data): Translation
     {
         $parsedData = shape([
-            'tailr_translations_id' => int(),
-            'tailr_translations_locale' => string(),
-            'tailr_translations_domain' => string(),
-            'tailr_translations_translation_key' => string(),
-            'tailr_translations_translation' => string(),
-            'tailr_translations_created_at' => DateTimeType::type(),
-            'tailr_translations_updated_at' => nullable(DateTimeType::type()),
+            'phpro_translations_id' => int(),
+            'phpro_translations_locale' => string(),
+            'phpro_translations_domain' => string(),
+            'phpro_translations_translation_key' => string(),
+            'phpro_translations_translation' => string(),
+            'phpro_translations_created_at' => DateTimeType::type(),
+            'phpro_translations_updated_at' => nullable(DateTimeType::type()),
         ])->coerce($data);
 
         return Translation::load(
-            $parsedData['tailr_translations_id'],
-            $parsedData['tailr_translations_locale'],
-            $parsedData['tailr_translations_domain'],
-            $parsedData['tailr_translations_translation_key'],
-            $parsedData['tailr_translations_translation'],
-            $parsedData['tailr_translations_created_at'],
-            $parsedData['tailr_translations_updated_at'],
+            $parsedData['phpro_translations_id'],
+            $parsedData['phpro_translations_locale'],
+            $parsedData['phpro_translations_domain'],
+            $parsedData['phpro_translations_translation_key'],
+            $parsedData['phpro_translations_translation'],
+            $parsedData['phpro_translations_created_at'],
+            $parsedData['phpro_translations_updated_at'],
         );
 
     }

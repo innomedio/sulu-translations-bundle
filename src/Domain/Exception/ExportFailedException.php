@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Domain\Exception;
+namespace Phpro\SuluTranslationsBundle\Domain\Exception;
 
 final class ExportFailedException extends \RuntimeException
 {

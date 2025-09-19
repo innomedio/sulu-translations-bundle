@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Exception;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Exception;
 
+use Phpro\SuluTranslationsBundle\Domain\Exception\ExportFailedException;
 use PHPUnit\Framework\TestCase;
-use Tailr\SuluTranslationsBundle\Domain\Exception\ExportFailedException;
 
 class ExportFailedExceptionTest extends TestCase
 {

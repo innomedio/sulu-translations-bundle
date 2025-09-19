@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Schema;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Schema;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\DBAL\Schema\Table;
-use Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager;
+use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager;
 
 class SetupTranslationsTable
 {

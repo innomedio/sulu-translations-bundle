@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Domain\Model;
+namespace Phpro\SuluTranslationsBundle\Domain\Model;
 
 use DateTimeImmutable;
 use Psl\Type\TypeInterface;

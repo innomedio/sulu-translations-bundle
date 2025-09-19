@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Model;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Model;
 
+use Phpro\SuluTranslationsBundle\Domain\Model\DateTimeType;
 use PHPUnit\Framework\TestCase;
 use Psl\Type\TypeInterface;
-use Tailr\SuluTranslationsBundle\Domain\Model\DateTimeType;
 
 final class DateTimeTypeTest extends TestCase
 {

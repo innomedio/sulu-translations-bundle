@@ -1,33 +1,33 @@
 services:
-  Tailr\SuluTranslationsBundle\Presentation\Controller\Admin\ListController:
+  Phpro\SuluTranslationsBundle\Presentation\Controller\Admin\ListController:
     arguments:
       - '@serializer'
       - '@sulu_core.list_rest_helper'
-      - '@Tailr\SuluTranslationsBundle\Domain\Query\FetchTranslations'
+      - '@Phpro\SuluTranslationsBundle\Domain\Query\FetchTranslations'
     tags:
       - { name: 'controller.service_arguments' }
       - { name: 'sulu.context', context: 'admin' }
 
-  Tailr\SuluTranslationsBundle\Presentation\Controller\Admin\FetchController:
+  Phpro\SuluTranslationsBundle\Presentation\Controller\Admin\FetchController:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Domain\Query\FetchTranslation'
-      - '@Tailr\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer'
+      - '@Phpro\SuluTranslationsBundle\Domain\Query\FetchTranslation'
+      - '@Phpro\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer'
     tags:
       - { name: 'controller.service_arguments' }
       - { name: 'sulu.context', context: 'admin' }
 
-  Tailr\SuluTranslationsBundle\Presentation\Controller\Admin\UpdateController:
+  Phpro\SuluTranslationsBundle\Presentation\Controller\Admin\UpdateController:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Domain\Command\UpdateHandler'
-      - '@Tailr\SuluTranslationsBundle\Domain\Query\FetchTranslation'
-      - '@Tailr\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer'
+      - '@Phpro\SuluTranslationsBundle\Domain\Command\UpdateHandler'
+      - '@Phpro\SuluTranslationsBundle\Domain\Query\FetchTranslation'
+      - '@Phpro\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer'
     tags:
       - { name: 'controller.service_arguments' }
       - { name: 'sulu.context', context: 'admin' }
 
-  Tailr\SuluTranslationsBundle\Presentation\Controller\Admin\ExportController:
+  Phpro\SuluTranslationsBundle\Presentation\Controller\Admin\ExportController:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Domain\Command\ExportHandler'
+      - '@Phpro\SuluTranslationsBundle\Domain\Command\ExportHandler'
     tags:
       - { name: 'controller.service_arguments' }
       - { name: 'sulu.context', context: 'admin' }

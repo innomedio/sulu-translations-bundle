@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Command;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Command;
 
+use Phpro\SuluTranslationsBundle\Domain\Command\UpdateCommand;
 use PHPUnit\Framework\TestCase;
-use Tailr\SuluTranslationsBundle\Domain\Command\UpdateCommand;
 
 class UpdateCommandTest extends TestCase
 {

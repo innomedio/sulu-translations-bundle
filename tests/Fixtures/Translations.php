@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Fixtures;
+namespace Phpro\SuluTranslationsBundle\Tests\Fixtures;
 
-use Tailr\SuluTranslationsBundle\Domain\Model\Translation;
+use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
 
 class Translations
 {

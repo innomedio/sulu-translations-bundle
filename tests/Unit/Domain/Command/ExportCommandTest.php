@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Command;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Command;
 
+use Phpro\SuluTranslationsBundle\Domain\Command\ExportCommand;
 use PHPUnit\Framework\TestCase;
-use Tailr\SuluTranslationsBundle\Domain\Command\ExportCommand;
 
 class ExportCommandTest extends TestCase
 {

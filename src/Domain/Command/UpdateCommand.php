@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Domain\Command;
+namespace Phpro\SuluTranslationsBundle\Domain\Command;
 
 class UpdateCommand
 {

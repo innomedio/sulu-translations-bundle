@@ -2,9 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Infrastructure\Translation\Provider;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Infrastructure\Translation\Provider;
 
 use Doctrine\Persistence\ManagerRegistry;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProvider;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProviderFactory;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Loader;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Remover;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Writer;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
@@ -12,11 +17,6 @@ use Symfony\Component\Translation\Exception\LogicException;
 use Symfony\Component\Translation\Exception\UnsupportedSchemeException;
 use Symfony\Component\Translation\Provider\Dsn;
 use Symfony\Component\Translation\Provider\ProviderInterface;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProvider;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProviderFactory;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Loader;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Remover;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Writer;
 
 class DatabaseProviderFactoryTest extends TestCase
 {
@@ -57,7 +57,7 @@ class DatabaseProviderFactoryTest extends TestCase
     public function it_will_throw_an_exception_with_invalid_scheme_given(): void
     {
         self::expectException(UnsupportedSchemeException::class);
-        $this->factory->create(new Dsn('invalid://tailr_translations'));
+        $this->factory->create(new Dsn('invalid://phpro_translations'));
     }
 
     /** @test */

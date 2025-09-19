@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Domain\Exception;
+namespace Phpro\SuluTranslationsBundle\Domain\Exception;
 
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 

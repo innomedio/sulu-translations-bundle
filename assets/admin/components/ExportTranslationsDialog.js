@@ -33,7 +33,7 @@ function ExportTranslationsDialog(props) {
     const onError = () => {
         setLoading(false);
         snackbarStore.add(
-            {type: 'error', text: translate('tailr_translations.export_general_error_message')},
+            {type: 'error', text: translate('phpro_translations.export_general_error_message')},
             8000
         );
         props.onCancel();
@@ -49,9 +49,9 @@ function ExportTranslationsDialog(props) {
     return (
         <>
             <Dialog
-                title={`${translate('tailr_translations.export_button_label')}`}
+                title={`${translate('phpro_translations.export_button_label')}`}
                 open={true}
-                key={'tailr_translations.export_translations_dialog'}
+                key={'phpro_translations.export_translations_dialog'}
                 snackbarType="warning"
                 cancelText={translate('Cancel')}
                 confirmText={translate('Ok')}
@@ -59,7 +59,7 @@ function ExportTranslationsDialog(props) {
                 onConfirm={doExport}
                 confirmLoading={loading}
             >
-                {translate('tailr_translations.export_confirmation_message')}
+                {translate('phpro_translations.export_confirmation_message')}
             </Dialog>
         </>
     );

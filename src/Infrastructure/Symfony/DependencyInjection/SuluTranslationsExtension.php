@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Symfony\DependencyInjection;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Symfony\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -32,10 +32,10 @@ class SuluTranslationsExtension extends Extension implements PrependExtensionInt
                         ],
                     ],
                     'resources' => [
-                        'tailr_translations' => [
+                        'phpro_translations' => [
                             'routes' => [
-                                'list' => 'tailr.translations_list',
-                                'detail' => 'tailr.translations_fetch',
+                                'list' => 'phpro.translations_list',
+                                'detail' => 'phpro.translations_fetch',
                             ],
                         ],
                     ],

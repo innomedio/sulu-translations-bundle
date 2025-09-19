@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Query;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Query;
 
+use Phpro\SuluTranslationsBundle\Domain\Query\SearchCriteria;
 use PHPUnit\Framework\TestCase;
-use Tailr\SuluTranslationsBundle\Domain\Query\SearchCriteria;
 
 class SearchCriteriaTest extends TestCase
 {

@@ -2,25 +2,26 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Presentation\Controller\Admin;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Presentation\Controller\Admin;
 
+use Phpro\SuluTranslationsBundle\Domain\Command\UpdateCommand;
+use Phpro\SuluTranslationsBundle\Domain\Command\UpdateHandler;
+use Phpro\SuluTranslationsBundle\Domain\Query\FetchTranslation;
+use Phpro\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer;
+use Phpro\SuluTranslationsBundle\Presentation\Controller\Admin\UpdateController;
+use Phpro\SuluTranslationsBundle\Tests\Fixtures\Translations;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Tailr\SuluTranslationsBundle\Domain\Command\UpdateCommand;
-use Tailr\SuluTranslationsBundle\Domain\Command\UpdateHandler;
-use Tailr\SuluTranslationsBundle\Domain\Query\FetchTranslation;
-use Tailr\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer;
-use Tailr\SuluTranslationsBundle\Presentation\Controller\Admin\UpdateController;
-use Tailr\SuluTranslationsBundle\Tests\Fixtures\Translations;
 
 class UpdateControllerTest extends TestCase
 {
     use ProphecyTrait;
 
     private UpdateHandler|ObjectProphecy $handler;
+    private FetchTranslation|ObjectProphecy $fetchTranslation;
     private TranslationSerializer|ObjectProphecy $serializer;
     private UpdateController $controller;
 
@@ -40,7 +41,7 @@ class UpdateControllerTest extends TestCase
     public function it_is_a_secured_controller(): void
     {
         self::assertInstanceOf(SecuredControllerInterface::class, $this->controller);
-        self::assertSame('tailr_translations', $this->controller->getSecurityContext());
+        self::assertSame('phpro_translations', $this->controller->getSecurityContext());
         self::assertSame('en', $this->controller->getLocale(new Request()));
     }
 

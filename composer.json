@@ -1,20 +1,20 @@
 {
-    "name": "tailrdigital/sulu-translations-bundle",
+    "name": "phpro/sulu-translations-bundle",
     "keywords": ["sulu", "translatsions", "i18n"],
     "type": "symfony-bundle",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Tailr\\SuluTranslationsBundle\\": "src/"
+            "Phpro\\SuluTranslationsBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tailr\\SuluTranslationsBundle\\Tests\\": "tests/"
+            "Phpro\\SuluTranslationsBundle\\Tests\\": "tests/"
         }
     },
     "require": {
-        "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
         "azjezz/psl": "^2.6 || ^3.0",
         "doctrine/dbal": "^3.6",
         "jackalope/jackalope-doctrine-dbal": "^1.7 || ^2.0",

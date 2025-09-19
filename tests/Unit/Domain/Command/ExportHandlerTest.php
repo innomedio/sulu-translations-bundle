@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Command;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Command;
 
+use Phpro\SuluTranslationsBundle\Domain\Action\ExportAction;
+use Phpro\SuluTranslationsBundle\Domain\Command\ExportCommand;
+use Phpro\SuluTranslationsBundle\Domain\Command\ExportHandler;
+use Phpro\SuluTranslationsBundle\Domain\Events\EventDispatcher;
+use Phpro\SuluTranslationsBundle\Domain\Events\Translation\TranslationsExportedEvent;
+use Phpro\SuluTranslationsBundle\Domain\Time\Clock;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
-use Tailr\SuluTranslationsBundle\Domain\Action\ExportAction;
-use Tailr\SuluTranslationsBundle\Domain\Command\ExportCommand;
-use Tailr\SuluTranslationsBundle\Domain\Command\ExportHandler;
-use Tailr\SuluTranslationsBundle\Domain\Events\EventDispatcher;
-use Tailr\SuluTranslationsBundle\Domain\Events\Translation\TranslationsExportedEvent;
-use Tailr\SuluTranslationsBundle\Domain\Time\Clock;
 
 class ExportHandlerTest extends TestCase
 {

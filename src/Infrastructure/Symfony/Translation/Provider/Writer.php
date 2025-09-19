@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider;
 
+use Phpro\SuluTranslationsBundle\Domain\Command\WriteCommand;
+use Phpro\SuluTranslationsBundle\Domain\Command\WriteHandler;
 use Symfony\Component\Translation\TranslatorBagInterface;
-use Tailr\SuluTranslationsBundle\Domain\Command\WriteCommand;
-use Tailr\SuluTranslationsBundle\Domain\Command\WriteHandler;
 
 class Writer
 {

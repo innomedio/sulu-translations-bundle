@@ -2,18 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Presentation\Console;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Presentation\Console;
 
+use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Schema\SetupTranslationsTable;
+use Phpro\SuluTranslationsBundle\Presentation\Console\SetupTranslationsTableCommand;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
+use Prophecy\Prophecy\ObjectProphecy;
 use Symfony\Component\Console\Tester\CommandTester;
-use Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Schema\SetupTranslationsTable;
-use Tailr\SuluTranslationsBundle\Presentation\Console\SetupTranslationsTableCommand;
 
 class SetupTranslationsTableCommandTest extends TestCase
 {
     use ProphecyTrait;
 
+    private ObjectProphecy|SetupTranslationsTable $schema;
     private CommandTester $commandTester;
 
     protected function setUp(): void

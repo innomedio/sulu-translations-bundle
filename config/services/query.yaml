@@ -1,7 +1,7 @@
 services:
-  Tailr\SuluTranslationsBundle\Domain\Query\FetchTranslation:
+  Phpro\SuluTranslationsBundle\Domain\Query\FetchTranslation:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository'
-  Tailr\SuluTranslationsBundle\Domain\Query\FetchTranslations:
+      - '@Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository'
+  Phpro\SuluTranslationsBundle\Domain\Query\FetchTranslations:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository'
+      - '@Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository'

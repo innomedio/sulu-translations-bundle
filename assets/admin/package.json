@@ -2,7 +2,7 @@
   "name": "sulu-translations-bundle",
   "description": "Sulu Translations Bundle",
   "license": "MIT",
-  "repository": "git@github.com:tailrdigital/sulu-translations-bundle.git",
+  "repository": "git@github.com:phpro/sulu-translations-bundle.git",
   "dependencies": {
     "zod": "^3.22.4"
   },

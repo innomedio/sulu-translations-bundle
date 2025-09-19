@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Schema;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Schema;
 
 use Doctrine\DBAL\Schema\Column;
 use Doctrine\DBAL\Schema\Schema;
@@ -14,7 +14,7 @@ use function Psl\Vec\map;
 
 class TranslationTable
 {
-    public const NAME = 'tailr_translations';
+    public const NAME = 'phpro_translations';
 
     public static function name(): string
     {

@@ -51,7 +51,7 @@ function TranslateWithAi({
             />
             {translating && (
                 <Translator
-                    key={`tailr_translations.translator_${version}`}
+                    key={`phpro_translations.translator_${version}`}
                     action={Actions}
                     actionProps={{
                         value,

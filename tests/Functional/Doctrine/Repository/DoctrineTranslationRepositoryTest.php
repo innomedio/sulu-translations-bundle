@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Functional\Doctrine\Repository;
+namespace Phpro\SuluTranslationsBundle\Tests\Functional\Doctrine\Repository;
 
+use Phpro\SuluTranslationsBundle\Domain\Exception\TranslationNotFoundException;
+use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
+use Phpro\SuluTranslationsBundle\Domain\Query\SearchCriteria;
+use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Mapper\TranslationMapper;
+use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Repository\DoctrineTranslationRepository;
+use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Schema\SetupTranslationsTable;
+use Phpro\SuluTranslationsBundle\Tests\Functional\Doctrine\DatabaseConnectionTrait;
 use PHPUnit\Framework\TestCase;
-use Tailr\SuluTranslationsBundle\Domain\Exception\TranslationNotFoundException;
-use Tailr\SuluTranslationsBundle\Domain\Model\Translation;
-use Tailr\SuluTranslationsBundle\Domain\Query\SearchCriteria;
-use Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Mapper\TranslationMapper;
-use Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Repository\DoctrineTranslationRepository;
-use Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Schema\SetupTranslationsTable;
-use Tailr\SuluTranslationsBundle\Tests\Functional\Doctrine\DatabaseConnectionTrait;
 
 class DoctrineTranslationRepositoryTest extends TestCase
 {

@@ -12,7 +12,7 @@ export async function updateTranslationValue(
     translation,
 ) {
     await runActionOnServer(
-        Requester.put(symfonyRouting.generate('tailr.translations_update', {id}), {
+        Requester.put(symfonyRouting.generate('phpro.translations_update', {id}), {
             translation: translation
         })
     );

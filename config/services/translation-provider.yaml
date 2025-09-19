@@ -1,21 +1,21 @@
 services:
-  Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Writer:
+  Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Writer:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Domain\Command\WriteHandler'
+      - '@Phpro\SuluTranslationsBundle\Domain\Command\WriteHandler'
 
-  Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Loader:
+  Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Loader:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository'
+      - '@Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository'
 
-  Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Remover:
+  Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Remover:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Domain\Command\DeleteHandler'
+      - '@Phpro\SuluTranslationsBundle\Domain\Command\DeleteHandler'
 
-  Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProviderFactory:
+  Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProviderFactory:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Writer'
-      - '@Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Loader'
-      - '@Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Remover'
+      - '@Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Writer'
+      - '@Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Loader'
+      - '@Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Remover'
       - '@Doctrine\Persistence\ManagerRegistry'
     tags:
       - { name: 'translation.provider_factory' }

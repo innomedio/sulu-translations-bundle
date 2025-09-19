@@ -2,21 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Infrastructure\Translation\Provider;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Infrastructure\Translation\Provider;
 
+use Phpro\SuluTranslationsBundle\Domain\Model\TranslationCollection;
+use Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Loader;
+use Phpro\SuluTranslationsBundle\Tests\Fixtures\Translations;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
-use Tailr\SuluTranslationsBundle\Domain\Model\TranslationCollection;
-use Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Loader;
-use Tailr\SuluTranslationsBundle\Tests\Fixtures\Translations;
 
 class LoaderTest extends TestCase
 {
     use ProphecyTrait;
 
     private TranslationRepository|ObjectProphecy $repository;
+    private Loader $loader;
 
     protected function setUp(): void
     {

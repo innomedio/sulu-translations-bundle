@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Events\Translation;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Events\Translation;
 
+use Phpro\SuluTranslationsBundle\Domain\Events\Translation\TranslationsExportedEvent;
 use PHPUnit\Framework\TestCase;
-use Tailr\SuluTranslationsBundle\Domain\Events\Translation\TranslationsExportedEvent;
 
 class TranslationsExportedEventTest extends TestCase
 {
