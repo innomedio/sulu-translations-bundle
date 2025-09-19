@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Command;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Command;
 
+use Phpro\SuluTranslationsBundle\Domain\Command\DeleteCommand;
+use Phpro\SuluTranslationsBundle\Domain\Command\DeleteHandler;
+use Phpro\SuluTranslationsBundle\Domain\Events\EventDispatcher;
+use Phpro\SuluTranslationsBundle\Domain\Events\Translation\TranslationDeletedEvent;
+use Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
+use Phpro\SuluTranslationsBundle\Domain\Time\Clock;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
-use Tailr\SuluTranslationsBundle\Domain\Command\DeleteCommand;
-use Tailr\SuluTranslationsBundle\Domain\Command\DeleteHandler;
-use Tailr\SuluTranslationsBundle\Domain\Events\EventDispatcher;
-use Tailr\SuluTranslationsBundle\Domain\Events\Translation\TranslationDeletedEvent;
-use Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
-use Tailr\SuluTranslationsBundle\Domain\Time\Clock;
 
 class DeleteHandlerTest extends TestCase
 {

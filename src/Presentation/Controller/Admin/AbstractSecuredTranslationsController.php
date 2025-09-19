@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Presentation\Controller\Admin;
+namespace Phpro\SuluTranslationsBundle\Presentation\Controller\Admin;
 
+use Phpro\SuluTranslationsBundle\Infrastructure\Sulu\Admin\TranslationsAdmin;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Tailr\SuluTranslationsBundle\Infrastructure\Sulu\Admin\TranslationsAdmin;
 
 abstract class AbstractSecuredTranslationsController implements SecuredControllerInterface
 {

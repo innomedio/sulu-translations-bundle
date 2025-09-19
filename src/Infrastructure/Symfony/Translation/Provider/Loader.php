@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider;
 
+use Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
 use Symfony\Component\Translation\MessageCatalogue;
 use Symfony\Component\Translation\TranslatorBag;
-use Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
 
 use function Psl\Type\string;
 use function Psl\Type\vec;

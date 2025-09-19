@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Time;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Time;
 
+use Phpro\SuluTranslationsBundle\Domain\Time\Clock;
 use Symfony\Component\Clock\ClockInterface;
-use Tailr\SuluTranslationsBundle\Domain\Time\Clock;
 
 class UtcClock implements Clock
 {

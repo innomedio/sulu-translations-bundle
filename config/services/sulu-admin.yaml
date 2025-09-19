@@ -1,5 +1,5 @@
 services:
-  Tailr\SuluTranslationsBundle\Infrastructure\Sulu\Admin\TranslationsAdmin:
+  Phpro\SuluTranslationsBundle\Infrastructure\Sulu\Admin\TranslationsAdmin:
     arguments:
       - '@sulu_admin.view_builder_factory'
       - '@sulu_security.security_checker'

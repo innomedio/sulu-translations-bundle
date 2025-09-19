@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Model;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Model;
 
+use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
 use PHPUnit\Framework\TestCase;
-use Tailr\SuluTranslationsBundle\Domain\Model\Translation;
 
 class TranslationTest extends TestCase
 {

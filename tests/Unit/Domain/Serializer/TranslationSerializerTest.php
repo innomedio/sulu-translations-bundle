@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Serializer;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Serializer;
 
+use Phpro\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer;
+use Phpro\SuluTranslationsBundle\Tests\Fixtures\Translations;
 use PHPUnit\Framework\TestCase;
-use Tailr\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer;
-use Tailr\SuluTranslationsBundle\Tests\Fixtures\Translations;
 
 class TranslationSerializerTest extends TestCase
 {

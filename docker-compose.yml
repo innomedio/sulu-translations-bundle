@@ -5,11 +5,11 @@ services:
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-root}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-toor}
-      POSTGRES_DB: ${POSTGRES_DB:-tailr-translations}
+      POSTGRES_DB: ${POSTGRES_DB:-sulu-translations}
     volumes:
       - sulu-translations-db:/var/lib/postgresql/data
     healthcheck:
-      test: [ "CMD", "pg_isready", "-U", "root", "-d", "tailr-translations" ]
+      test: [ "CMD", "pg_isready", "-U", "root", "-d", "sulu-translations" ]
       interval: 10s
       timeout: 5s
       retries: 5

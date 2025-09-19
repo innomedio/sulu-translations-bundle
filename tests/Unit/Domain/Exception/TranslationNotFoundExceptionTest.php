@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Exception;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Exception;
 
+use Phpro\SuluTranslationsBundle\Domain\Exception\TranslationNotFoundException;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Tailr\SuluTranslationsBundle\Domain\Exception\TranslationNotFoundException;
 
 class TranslationNotFoundExceptionTest extends TestCase
 {

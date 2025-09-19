@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Command;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Command;
 
+use Phpro\SuluTranslationsBundle\Domain\Command\WriteCommand;
+use Phpro\SuluTranslationsBundle\Domain\Command\WriteHandler;
+use Phpro\SuluTranslationsBundle\Domain\Events\EventDispatcher;
+use Phpro\SuluTranslationsBundle\Domain\Events\Translation\TranslationCreatedEvent;
+use Phpro\SuluTranslationsBundle\Domain\Events\Translation\TranslationUpdatedEvent;
+use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
+use Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
+use Phpro\SuluTranslationsBundle\Domain\Time\Clock;
+use Phpro\SuluTranslationsBundle\Tests\Fixtures\Translations;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
-use Tailr\SuluTranslationsBundle\Domain\Command\WriteCommand;
-use Tailr\SuluTranslationsBundle\Domain\Command\WriteHandler;
-use Tailr\SuluTranslationsBundle\Domain\Events\EventDispatcher;
-use Tailr\SuluTranslationsBundle\Domain\Events\Translation\TranslationCreatedEvent;
-use Tailr\SuluTranslationsBundle\Domain\Events\Translation\TranslationUpdatedEvent;
-use Tailr\SuluTranslationsBundle\Domain\Model\Translation;
-use Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
-use Tailr\SuluTranslationsBundle\Domain\Time\Clock;
-use Tailr\SuluTranslationsBundle\Tests\Fixtures\Translations;
 
 class WriteHandlerTest extends TestCase
 {

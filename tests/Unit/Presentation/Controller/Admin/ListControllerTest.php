@@ -2,8 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Presentation\Controller\Admin;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Presentation\Controller\Admin;
 
+use Phpro\SuluTranslationsBundle\Domain\Model\TranslationCollection;
+use Phpro\SuluTranslationsBundle\Domain\Model\TranslationList;
+use Phpro\SuluTranslationsBundle\Domain\Query\FetchTranslations;
+use Phpro\SuluTranslationsBundle\Domain\Query\SearchCriteria;
+use Phpro\SuluTranslationsBundle\Presentation\Controller\Admin\ListController;
+use Phpro\SuluTranslationsBundle\Tests\Fixtures\Translations;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
@@ -12,12 +18,6 @@ use Sulu\Component\Rest\ListBuilder\ListRestHelperInterface;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\SerializerInterface;
-use Tailr\SuluTranslationsBundle\Domain\Model\TranslationCollection;
-use Tailr\SuluTranslationsBundle\Domain\Model\TranslationList;
-use Tailr\SuluTranslationsBundle\Domain\Query\FetchTranslations;
-use Tailr\SuluTranslationsBundle\Domain\Query\SearchCriteria;
-use Tailr\SuluTranslationsBundle\Presentation\Controller\Admin\ListController;
-use Tailr\SuluTranslationsBundle\Tests\Fixtures\Translations;
 
 class ListControllerTest extends TestCase
 {
@@ -45,7 +45,7 @@ class ListControllerTest extends TestCase
     public function it_is_a_secured_controller(): void
     {
         self::assertInstanceOf(SecuredControllerInterface::class, $this->controller);
-        self::assertSame('tailr_translations', $this->controller->getSecurityContext());
+        self::assertSame('phpro_translations', $this->controller->getSecurityContext());
         self::assertSame('en', $this->controller->getLocale(new Request()));
     }
 
@@ -82,7 +82,7 @@ class ListControllerTest extends TestCase
         )->shouldBeCalledOnce();
 
         $this->serializer->serialize(Argument::type('array'), 'json')
-            ->willReturn($serializedData = '{"_embedded": {"tailr_translations": []}, "limit": 10, "total": 2, "page": 1, "pages": 1}');
+            ->willReturn($serializedData = '{"_embedded": {"phpro_translations": []}, "limit": 10, "total": 2, "page": 1, "pages": 1}');
 
         $response = ($this->controller)();
 
@@ -126,7 +126,7 @@ class ListControllerTest extends TestCase
         )->shouldBeCalledOnce();
 
         $this->serializer->serialize(Argument::type('array'), 'json')
-            ->willReturn($serializedData = '{"_embedded": {"tailr_translations": []}, "limit": 10, "total": 1, "page": 1, "pages": 1}');
+            ->willReturn($serializedData = '{"_embedded": {"phpro_translations": []}, "limit": 10, "total": 1, "page": 1, "pages": 1}');
 
         $response = ($this->controller)();
 

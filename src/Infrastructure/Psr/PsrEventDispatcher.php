@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Psr;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Psr;
 
+use Phpro\SuluTranslationsBundle\Domain\Events\DomainEvent;
+use Phpro\SuluTranslationsBundle\Domain\Events\EventDispatcher;
 use Psr\EventDispatcher\EventDispatcherInterface;
-use Tailr\SuluTranslationsBundle\Domain\Events\DomainEvent;
-use Tailr\SuluTranslationsBundle\Domain\Events\EventDispatcher;
 
 use function Psl\Type\instance_of;
 

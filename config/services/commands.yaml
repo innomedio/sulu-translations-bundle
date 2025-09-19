@@ -1,24 +1,24 @@
 services:
-  Tailr\SuluTranslationsBundle\Domain\Command\ExportHandler:
+  Phpro\SuluTranslationsBundle\Domain\Command\ExportHandler:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Domain\Time\Clock'
-      - '@Tailr\SuluTranslationsBundle\Domain\Action\ExportAction'
-      - '@Tailr\SuluTranslationsBundle\Domain\Events\EventDispatcher'
+      - '@Phpro\SuluTranslationsBundle\Domain\Time\Clock'
+      - '@Phpro\SuluTranslationsBundle\Domain\Action\ExportAction'
+      - '@Phpro\SuluTranslationsBundle\Domain\Events\EventDispatcher'
 
-  Tailr\SuluTranslationsBundle\Domain\Command\DeleteHandler:
+  Phpro\SuluTranslationsBundle\Domain\Command\DeleteHandler:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Domain\Time\Clock'
-      - '@Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository'
-      - '@Tailr\SuluTranslationsBundle\Domain\Events\EventDispatcher'
+      - '@Phpro\SuluTranslationsBundle\Domain\Time\Clock'
+      - '@Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository'
+      - '@Phpro\SuluTranslationsBundle\Domain\Events\EventDispatcher'
 
-  Tailr\SuluTranslationsBundle\Domain\Command\UpdateHandler:
+  Phpro\SuluTranslationsBundle\Domain\Command\UpdateHandler:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Domain\Time\Clock'
-      - '@Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository'
-      - '@Tailr\SuluTranslationsBundle\Domain\Events\EventDispatcher'
+      - '@Phpro\SuluTranslationsBundle\Domain\Time\Clock'
+      - '@Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository'
+      - '@Phpro\SuluTranslationsBundle\Domain\Events\EventDispatcher'
 
-  Tailr\SuluTranslationsBundle\Domain\Command\WriteHandler:
+  Phpro\SuluTranslationsBundle\Domain\Command\WriteHandler:
     arguments:
-      - '@Tailr\SuluTranslationsBundle\Domain\Time\Clock'
-      - '@Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository'
-      - '@Tailr\SuluTranslationsBundle\Domain\Events\EventDispatcher'
+      - '@Phpro\SuluTranslationsBundle\Domain\Time\Clock'
+      - '@Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository'
+      - '@Phpro\SuluTranslationsBundle\Domain\Events\EventDispatcher'

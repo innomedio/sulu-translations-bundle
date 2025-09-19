@@ -31,7 +31,7 @@ function InlineEditForm({translationId, value, locale, translationKey}) {
 
     const onError = () => {
         snackbarStore.add(
-            {type: 'error', text: translate('tailr_translations.update_general_error_message')},
+            {type: 'error', text: translate('phpro_translations.update_general_error_message')},
             8000
         );
         setEditingValue(value);
@@ -57,7 +57,7 @@ function InlineEditForm({translationId, value, locale, translationKey}) {
     return (
         <div style={styles.container}>
             <textarea
-                key={`tailr_translations.inline_edit_form_${translationId}`}
+                key={`phpro_translations.inline_edit_form_${translationId}`}
                 style={styles.textarea}
                 rows={2}
                 cols={45}

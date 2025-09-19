@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Functional\Doctrine;
+namespace Phpro\SuluTranslationsBundle\Tests\Functional\Doctrine;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
+use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager;
+use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Schema\TranslationTable;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
-use Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager;
-use Tailr\SuluTranslationsBundle\Infrastructure\Doctrine\Schema\TranslationTable;
 
 use function Psl\Result\wrap;
 

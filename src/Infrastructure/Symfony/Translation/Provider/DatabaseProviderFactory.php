@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider;
 
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Translation\Exception\LogicException;
@@ -12,7 +12,7 @@ use Symfony\Component\Translation\Provider\Dsn;
 
 final class DatabaseProviderFactory extends AbstractProviderFactory
 {
-    public const PROVIDER_NAME = 'tailr_database';
+    public const PROVIDER_NAME = 'phpro_database';
     public const PROVIDER_DSN_SCHEME = 'database';
 
     public function __construct(

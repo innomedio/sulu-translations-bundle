@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle;
+namespace Phpro\SuluTranslationsBundle;
 
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\DependencyInjection\SuluTranslationsExtension;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\DependencyInjection\SuluTranslationsExtension;
 
 class SuluTranslationsBundle extends Bundle
 {

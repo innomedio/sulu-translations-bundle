@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Presentation\Controller\Admin;
+namespace Phpro\SuluTranslationsBundle\Presentation\Controller\Admin;
 
+use Phpro\SuluTranslationsBundle\Domain\Query\FetchTranslation;
+use Phpro\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Tailr\SuluTranslationsBundle\Domain\Query\FetchTranslation;
-use Tailr\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer;
 
-#[Route(path: '/translations/{id}', name: 'tailr.translations_fetch', options: ['expose' => true], methods: ['GET'])]
+#[Route(path: '/translations/{id}', name: 'phpro.translations_fetch', options: ['expose' => true], methods: ['GET'])]
 final class FetchController extends AbstractSecuredTranslationsController implements SecuredControllerInterface
 {
     public function __construct(

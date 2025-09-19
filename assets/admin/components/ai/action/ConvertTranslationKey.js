@@ -23,7 +23,7 @@ function ConvertTranslationKey({locale, translationKey, onChange}) {
                 (error) => {
                     console.error('Error humanizing translation key:', error);
                     snackbarStore.add(
-                        {type: 'error', text: translate('tailr_translations.unable_to_humanize_translation_key')},
+                        {type: 'error', text: translate('phpro_translations.unable_to_humanize_translation_key')},
                         8000
                     );
                 }
@@ -40,7 +40,7 @@ function ConvertTranslationKey({locale, translationKey, onChange}) {
             onClick={onClick}
             loading={loading}
         >
-            {translate('tailr_translations.ai_action.humanize')}
+            {translate('phpro_translations.ai_action.humanize')}
         </Button>
     );
 }

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Infrastructure\Time;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Infrastructure\Time;
 
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Time\UtcClock;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Clock\MockClock;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Time\UtcClock;
 
 class UtcClockTest extends TestCase
 {

@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Infrastructure\Translation\Provider;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Infrastructure\Translation\Provider;
 
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProvider;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Loader;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Remover;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Writer;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Symfony\Component\Translation\Provider\ProviderInterface;
 use Symfony\Component\Translation\TranslatorBag;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProvider;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Loader;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Remover;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Writer;
 
 class DatabaseProviderTest extends TestCase
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Domain\Query;
+namespace Phpro\SuluTranslationsBundle\Domain\Query;
 
 final class SearchCriteria
 {

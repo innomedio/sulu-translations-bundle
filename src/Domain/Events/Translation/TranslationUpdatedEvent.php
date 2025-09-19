@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Domain\Events\Translation;
+namespace Phpro\SuluTranslationsBundle\Domain\Events\Translation;
 
-use Tailr\SuluTranslationsBundle\Domain\Events\DomainEvent;
-use Tailr\SuluTranslationsBundle\Domain\Model\Translation;
+use Phpro\SuluTranslationsBundle\Domain\Events\DomainEvent;
+use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
 
 class TranslationUpdatedEvent implements DomainEvent
 {

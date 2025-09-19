@@ -7,6 +7,6 @@ import symfonyRouting from "fos-jsrouting/router";
  */
 export async function exportTranslations(){
     return await runActionOnServer(
-        Requester.post(symfonyRouting.generate('tailr.translations_export'))
+        Requester.post(symfonyRouting.generate('phpro.translations_export'))
     );
 }

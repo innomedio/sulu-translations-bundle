@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Infrastructure\Psr;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Infrastructure\Psr;
 
+use Phpro\SuluTranslationsBundle\Domain\Events\Translation\TranslationCreatedEvent;
+use Phpro\SuluTranslationsBundle\Infrastructure\Psr\PsrEventDispatcher;
+use Phpro\SuluTranslationsBundle\Tests\Fixtures\Translations;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Psr\EventDispatcher\EventDispatcherInterface;
-use Tailr\SuluTranslationsBundle\Domain\Events\Translation\TranslationCreatedEvent;
-use Tailr\SuluTranslationsBundle\Infrastructure\Psr\PsrEventDispatcher;
-use Tailr\SuluTranslationsBundle\Tests\Fixtures\Translations;
 
 class PsrEventDispatcherTest extends TestCase
 {

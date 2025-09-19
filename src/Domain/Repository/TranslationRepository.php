@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Domain\Repository;
+namespace Phpro\SuluTranslationsBundle\Domain\Repository;
 
-use Tailr\SuluTranslationsBundle\Domain\Model\Translation;
-use Tailr\SuluTranslationsBundle\Domain\Model\TranslationCollection;
-use Tailr\SuluTranslationsBundle\Domain\Query\SearchCriteria;
+use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
+use Phpro\SuluTranslationsBundle\Domain\Model\TranslationCollection;
+use Phpro\SuluTranslationsBundle\Domain\Query\SearchCriteria;
 
 interface TranslationRepository
 {

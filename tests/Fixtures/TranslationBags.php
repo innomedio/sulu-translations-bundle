@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Fixtures;
+namespace Phpro\SuluTranslationsBundle\Tests\Fixtures;
 
 use Symfony\Component\Translation\MessageCatalogue;
 use Symfony\Component\Translation\TranslatorBag;

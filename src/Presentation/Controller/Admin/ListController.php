@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Presentation\Controller\Admin;
+namespace Phpro\SuluTranslationsBundle\Presentation\Controller\Admin;
 
+use Phpro\SuluTranslationsBundle\Domain\Query\FetchTranslations;
+use Phpro\SuluTranslationsBundle\Domain\Query\SearchCriteria;
 use Sulu\Component\Rest\ListBuilder\ListRestHelperInterface;
 use Sulu\Component\Rest\ListBuilder\PaginatedRepresentation;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
-use Tailr\SuluTranslationsBundle\Domain\Query\FetchTranslations;
-use Tailr\SuluTranslationsBundle\Domain\Query\SearchCriteria;
 
 use function Psl\Type\int;
 
-#[Route(path: '/translations', name: 'tailr.translations_list', options: ['expose' => true], methods: ['GET'])]
+#[Route(path: '/translations', name: 'phpro.translations_list', options: ['expose' => true], methods: ['GET'])]
 final class ListController extends AbstractSecuredTranslationsController implements SecuredControllerInterface
 {
-    public const RESOURCE_KEY = 'tailr_translations';
+    public const RESOURCE_KEY = 'phpro_translations';
 
     public function __construct(
         private readonly SerializerInterface $serializer,

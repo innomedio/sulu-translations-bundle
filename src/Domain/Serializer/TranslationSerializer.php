@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Domain\Serializer;
+namespace Phpro\SuluTranslationsBundle\Domain\Serializer;
 
-use Tailr\SuluTranslationsBundle\Domain\Model\Translation;
+use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
 
 class TranslationSerializer
 {

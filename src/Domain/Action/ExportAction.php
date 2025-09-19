@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Domain\Action;
+namespace Phpro\SuluTranslationsBundle\Domain\Action;
 
-use Tailr\SuluTranslationsBundle\Domain\Exception\ExportFailedException;
+use Phpro\SuluTranslationsBundle\Domain\Exception\ExportFailedException;
 
 interface ExportAction
 {

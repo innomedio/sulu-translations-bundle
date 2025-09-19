@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Domain\Events\Translation;
+namespace Phpro\SuluTranslationsBundle\Domain\Events\Translation;
 
-use Tailr\SuluTranslationsBundle\Domain\Events\DomainEvent;
+use Phpro\SuluTranslationsBundle\Domain\Events\DomainEvent;
 
 class TranslationDeletedEvent implements DomainEvent
 {

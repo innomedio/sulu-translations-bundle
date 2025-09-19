@@ -29,9 +29,9 @@ initializer.addUpdateConfigHook('sulu_ai', (config, initialized) => {
 });
 
 function registerToolbarActions() {
-    listToolbarActionRegistry.add('tailr_translation.export_translations', ExportTranslationsToolbarAction);
+    listToolbarActionRegistry.add('phpro_translation.export_translations', ExportTranslationsToolbarAction);
 }
 
 function registerFieldTransformers() {
-    listFieldTransformerRegistry.add('tailr_translation.inline_edit', new InlineEditFieldTransformer());
+    listFieldTransformerRegistry.add('phpro_translation.inline_edit', new InlineEditFieldTransformer());
 }

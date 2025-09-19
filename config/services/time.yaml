@@ -1,9 +1,9 @@
 services:
-  tailr_translations.utc_clock:
+  phpro_translations.utc_clock:
     class: Symfony\Component\Clock\NativeClock
     arguments:
       - 'utc'
-  Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Time\UtcClock:
+  Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Time\UtcClock:
     arguments:
-      - '@tailr_translations.utc_clock'
-  Tailr\SuluTranslationsBundle\Domain\Time\Clock: '@Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Time\UtcClock'
+      - '@phpro_translations.utc_clock'
+  Phpro\SuluTranslationsBundle\Domain\Time\Clock: '@Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Time\UtcClock'

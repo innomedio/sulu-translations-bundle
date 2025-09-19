@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Doctrine;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Doctrine;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\Persistence\ManagerRegistry;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProviderFactory;
 use Symfony\Component\Translation\Provider\Dsn;
-use Symfony\Component\Translation\Provider\TranslationProviderCollection;
 
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProviderFactory;
+use Symfony\Component\Translation\Provider\TranslationProviderCollection;
 
 use function Psl\Type\instance_of;
 

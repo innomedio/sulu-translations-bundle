@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Domain\Time;
+namespace Phpro\SuluTranslationsBundle\Domain\Time;
 
 interface Clock
 {

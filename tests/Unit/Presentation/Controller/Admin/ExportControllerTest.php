@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Presentation\Controller\Admin;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Presentation\Controller\Admin;
 
+use Phpro\SuluTranslationsBundle\Domain\Command\ExportCommand;
+use Phpro\SuluTranslationsBundle\Domain\Command\ExportHandler;
+use Phpro\SuluTranslationsBundle\Presentation\Controller\Admin\ExportController;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Tailr\SuluTranslationsBundle\Domain\Command\ExportCommand;
-use Tailr\SuluTranslationsBundle\Domain\Command\ExportHandler;
-use Tailr\SuluTranslationsBundle\Presentation\Controller\Admin\ExportController;
 
 class ExportControllerTest extends TestCase
 {
@@ -32,7 +32,7 @@ class ExportControllerTest extends TestCase
     public function it_is_a_secured_controller(): void
     {
         self::assertInstanceOf(SecuredControllerInterface::class, $this->controller);
-        self::assertSame('tailr_translations', $this->controller->getSecurityContext());
+        self::assertSame('phpro_translations', $this->controller->getSecurityContext());
         self::assertSame('en', $this->controller->getLocale(new Request()));
     }
 

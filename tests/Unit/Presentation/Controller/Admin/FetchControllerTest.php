@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Presentation\Controller\Admin;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Presentation\Controller\Admin;
 
+use Phpro\SuluTranslationsBundle\Domain\Query\FetchTranslation;
+use Phpro\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer;
+use Phpro\SuluTranslationsBundle\Presentation\Controller\Admin\FetchController;
+use Phpro\SuluTranslationsBundle\Tests\Fixtures\Translations;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Tailr\SuluTranslationsBundle\Domain\Query\FetchTranslation;
-use Tailr\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer;
-use Tailr\SuluTranslationsBundle\Presentation\Controller\Admin\FetchController;
-use Tailr\SuluTranslationsBundle\Tests\Fixtures\Translations;
 
 class FetchControllerTest extends TestCase
 {
@@ -36,7 +36,7 @@ class FetchControllerTest extends TestCase
     public function it_is_a_secured_controller(): void
     {
         self::assertInstanceOf(SecuredControllerInterface::class, $this->controller);
-        self::assertSame('tailr_translations', $this->controller->getSecurityContext());
+        self::assertSame('phpro_translations', $this->controller->getSecurityContext());
         self::assertSame('en', $this->controller->getLocale(new Request()));
     }
 

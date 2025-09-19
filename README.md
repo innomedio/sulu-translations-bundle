@@ -11,14 +11,14 @@ https://github.com/user-attachments/assets/65278818-b376-4c6b-816d-9dceab905140
 ## Installation
 
 ```sh
-composer require tailrdigital/sulu-translations-bundle
+composer require phpro/sulu-translations-bundle
 ```
 
 #### Register the bundle
 Make sure the bundle is activated in `config/bundles.php`:
 
 ```php
-Tailr\SuluTranslationsBundle\SuluTranslationsBundle::class => ['all' => true]
+Phpro\SuluTranslationsBundle\SuluTranslationsBundle::class => ['all' => true]
 ```
 
 #### Register new admin routes
@@ -28,7 +28,7 @@ You need to manually register the failed queue admin controller routes in the fi
 ```yaml
 # config/routes_admin.yaml
 
-tailr_translations:
+phpro_translations:
   resource: '@SuluTranslationsBundle/Presentation/Controller/Admin'
   type: attribute
   prefix: /admin/api
@@ -41,7 +41,7 @@ Register an additional module in your admin's node dependencies via `assets/admi
 ```json
 {
   "dependencies": {
-    "sulu-translations-bundle": "file:../../vendor/tailrdigital/sulu-translations-bundle/assets/admin"
+    "sulu-translations-bundle": "file:../../vendor/phpro/sulu-translations-bundle/assets/admin"
   }  
 }
 ```
@@ -72,7 +72,7 @@ You have to add the database provider to the Symfony translator configuration. T
 framework:
     translator:
         providers:
-            tailr_database:
+            phpro_database:
                 dsn: 'database://default'
                 domains: [ 'messages' ]
                 locales: [ 'en', 'fr', 'nl' ]
@@ -83,13 +83,13 @@ framework:
 The hostname in the DSN is actually your Doctrine DBAL connection name: `database://<dbal_connection_name>`. 
 If you want to store your translations in a separate database (preferred), you could [configure a new DBAL connection](https://symfony.com/doc/current/doctrine/multiple_entity_managers.html) and use the connection name in the DSN of the database translation provider.
 
-If you are using your default DBAL connection you probably want to configure `doctrine.dbal.schema_filter` so your migrations doesn't try to drop the `tailr_translations` table.
+If you are using your default DBAL connection you probably want to configure `doctrine.dbal.schema_filter` so your migrations doesn't try to drop the `phpro_translations` table.
 
 ```yaml
 doctrine:
     dbal:
         url: '%env(DATABASE_URL)%'
-        schema_filter: '/^(?!(other_prefix_|tailr_translations))/'
+        schema_filter: '/^(?!(other_prefix_|phpro_translations))/'
 ```
 
 #### Export format
@@ -105,14 +105,14 @@ sulu_translations:
 
 #### Permissions
 
-Make sure you've set the correct permissions in the Sulu admin for this package. Go to _Settings > User Roles_ and enable the permissions (tailr_translations) you need. Afterwards you could find the translations view/panel via _Settings > Manage translations_.
+Make sure you've set the correct permissions in the Sulu admin for this package. Go to _Settings > User Roles_ and enable the permissions (phpro_translations) you need. Afterwards you could find the translations view/panel via _Settings > Manage translations_.
 
 ## Usage
 
-First make sure the database table `tailr_translations` is created by running the command below.
+First make sure the database table `phpro_translations` is created by running the command below.
 
 ```sh
-bin/console tailr:sulu-translations:setup
+bin/console phpro:sulu-translations:setup
 ```
 
 If you don't have local translations files (e.g. CSV) you can generate them by using the command below.
@@ -124,7 +124,7 @@ bin/console translation:extract --force --domain=messages --format=csv <locale>
 Once you have local translation files, you can export them to the database by using command below.
 
 ```sh
-bin/console translation:push tailr_database 
+bin/console translation:push phpro_database 
 ```
 
 Next you can update the translations via the Sulu admin panel. 
@@ -132,7 +132,7 @@ Next you can update the translations via the Sulu admin panel.
 Once you are done, you can export the translations back to the translations files by using the command below or clicking the _Export translations_ button via the Sulu admin panel.
 
 ```sh
-bin/console translation:pull tailr_database --force --format csv
+bin/console translation:pull phpro_database --force --format csv
 ```
 
 After pulling the translations, you may need to clear the cache(s).

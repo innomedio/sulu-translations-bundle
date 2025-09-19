@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Tests\Unit\Domain\Query;
+namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Query;
 
+use Phpro\SuluTranslationsBundle\Domain\Model\TranslationCollection;
+use Phpro\SuluTranslationsBundle\Domain\Query\FetchTranslations;
+use Phpro\SuluTranslationsBundle\Domain\Query\SearchCriteria;
+use Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
+use Phpro\SuluTranslationsBundle\Tests\Fixtures\Translations;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
-use Tailr\SuluTranslationsBundle\Domain\Model\TranslationCollection;
-use Tailr\SuluTranslationsBundle\Domain\Query\FetchTranslations;
-use Tailr\SuluTranslationsBundle\Domain\Query\SearchCriteria;
-use Tailr\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
-use Tailr\SuluTranslationsBundle\Tests\Fixtures\Translations;
 
 class FetchTranslationsTest extends TestCase
 {

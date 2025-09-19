@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Export;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Export;
 
+use Phpro\SuluTranslationsBundle\Domain\Action\ExportAction;
+use Phpro\SuluTranslationsBundle\Domain\Exception\ExportFailedException;
+use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProviderFactory;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
-use Tailr\SuluTranslationsBundle\Domain\Action\ExportAction;
-use Tailr\SuluTranslationsBundle\Domain\Exception\ExportFailedException;
-use Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProviderFactory;
 
 class CliExportAction implements ExportAction
 {

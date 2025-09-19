@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider;
+namespace Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider;
 
+use Phpro\SuluTranslationsBundle\Domain\Command\DeleteCommand;
+use Phpro\SuluTranslationsBundle\Domain\Command\DeleteHandler;
 use Symfony\Component\Translation\TranslatorBagInterface;
-use Tailr\SuluTranslationsBundle\Domain\Command\DeleteCommand;
-use Tailr\SuluTranslationsBundle\Domain\Command\DeleteHandler;
 
 class Remover
 {
