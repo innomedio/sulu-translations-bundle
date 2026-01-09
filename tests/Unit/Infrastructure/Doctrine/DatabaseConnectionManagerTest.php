@@ -14,7 +14,7 @@ use Prophecy\Prophecy\ObjectProphecy;
 use Symfony\Component\Translation\Provider\ProviderInterface;
 use Symfony\Component\Translation\Provider\TranslationProviderCollection;
 
-class DatabaseConnectionManagerTest extends TestCase
+final class DatabaseConnectionManagerTest extends TestCase
 {
     use ProphecyTrait;
 

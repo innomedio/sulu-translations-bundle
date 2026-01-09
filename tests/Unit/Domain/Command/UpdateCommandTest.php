@@ -7,7 +7,7 @@ namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Command;
 use Phpro\SuluTranslationsBundle\Domain\Command\UpdateCommand;
 use PHPUnit\Framework\TestCase;
 
-class UpdateCommandTest extends TestCase
+final class UpdateCommandTest extends TestCase
 {
     /** @test */
     public function it_can_create_a_command(): void

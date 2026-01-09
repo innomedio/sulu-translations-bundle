@@ -14,7 +14,7 @@ use Sulu\Bundle\AdminBundle\Admin\View\ViewCollection;
 use Sulu\Component\Security\Authorization\PermissionTypes;
 use Sulu\Component\Security\Authorization\SecurityCheckerInterface;
 
-class TranslationsAdmin extends Admin
+final class TranslationsAdmin extends Admin
 {
     final public const SECURITY_CONTEXT = 'phpro_translations';
     private const SECURITY_CONTEXT_GROUP = 'Settings';

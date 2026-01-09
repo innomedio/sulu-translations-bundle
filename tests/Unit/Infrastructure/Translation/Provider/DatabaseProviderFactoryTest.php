@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Phpro\SuluTranslationsBundle\Tests\Unit\Infrastructure\Translation\Provider;
 
+use Doctrine\DBAL\Connection;
 use Doctrine\Persistence\ManagerRegistry;
 use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProvider;
 use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\DatabaseProviderFactory;
@@ -18,7 +19,7 @@ use Symfony\Component\Translation\Exception\UnsupportedSchemeException;
 use Symfony\Component\Translation\Provider\Dsn;
 use Symfony\Component\Translation\Provider\ProviderInterface;
 
-class DatabaseProviderFactoryTest extends TestCase
+final class DatabaseProviderFactoryTest extends TestCase
 {
     use ProphecyTrait;
 
@@ -46,8 +47,10 @@ class DatabaseProviderFactoryTest extends TestCase
     /** @test */
     public function it_can_create_a_database_provider(): void
     {
+        $connection = $this->prophesize(Connection::class);
+        $this->managerRegistry->getConnection('default')->willReturn($connection->reveal())->shouldBeCalled();
+
         $provider = $this->factory->create(new Dsn('database://default'));
-        $this->managerRegistry->getConnection('default')->shouldBeCalled();
         self::assertInstanceOf(ProviderInterface::class, $provider);
         self::assertInstanceOf(DatabaseProvider::class, $provider);
         self::assertStringEndsWith('default', (string) $provider);

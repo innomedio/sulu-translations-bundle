@@ -13,7 +13,7 @@ use Prophecy\Prophecy\ObjectProphecy;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
-class ExportControllerTest extends TestCase
+final class ExportControllerTest extends TestCase
 {
     use ProphecyTrait;
 

@@ -16,7 +16,7 @@ use Prophecy\Prophecy\ObjectProphecy;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
-class UpdateControllerTest extends TestCase
+final class UpdateControllerTest extends TestCase
 {
     use ProphecyTrait;
 

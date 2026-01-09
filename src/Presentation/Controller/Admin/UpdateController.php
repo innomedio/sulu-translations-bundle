@@ -11,7 +11,7 @@ use Phpro\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 
 use function Psl\Type\string;
 

@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Phpro\SuluTranslationsBundle\Domain\Model;
 
+use IteratorAggregate;
+
 /**
  * @psalm-immutable
  *
- * @template-implements \IteratorAggregate<int, Translation>
+ * @template-implements IteratorAggregate<int, Translation>
  */
-class TranslationCollection implements \IteratorAggregate, \Countable
+final class TranslationCollection implements \IteratorAggregate, \Countable
 {
     /**
      * @var Translation[]

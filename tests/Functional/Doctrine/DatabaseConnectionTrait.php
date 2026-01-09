@@ -6,6 +6,7 @@ namespace Phpro\SuluTranslationsBundle\Tests\Functional\Doctrine;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
+use Doctrine\DBAL\Tools\DsnParser;
 use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager;
 use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Schema\TranslationTable;
 use Prophecy\PhpUnit\ProphecyTrait;
@@ -21,7 +22,20 @@ trait DatabaseConnectionTrait
 
     protected function setupConnection(): void
     {
-        $this->connection = DriverManager::getConnection(['url' => $_ENV['DATABASE_URL']]);
+        $dsnParser = new DsnParser([
+            'db2' => 'ibm_db2',
+            'mssql' => 'pdo_sqlsrv',
+            'mysql' => 'pdo_mysql',
+            'mysql2' => 'pdo_mysql',
+            'postgres' => 'pdo_pgsql',
+            'postgresql' => 'pdo_pgsql',
+            'pgsql' => 'pdo_pgsql',
+            'sqlite' => 'pdo_sqlite',
+            'sqlite3' => 'pdo_sqlite',
+        ]);
+        $connectionParams = $dsnParser->parse($_ENV['DATABASE_URL']);
+
+        $this->connection = DriverManager::getConnection($connectionParams);
     }
 
     /**

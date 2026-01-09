@@ -8,7 +8,7 @@ use Symfony\Component\Translation\MessageCatalogue;
 use Symfony\Component\Translation\TranslatorBag;
 use Symfony\Component\Translation\TranslatorBagInterface;
 
-class TranslationBags
+final class TranslationBags
 {
     public static function simple(): TranslatorBagInterface
     {

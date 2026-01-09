@@ -12,7 +12,7 @@ use function Psl\Type\nullable;
 use function Psl\Type\shape;
 use function Psl\Type\string;
 
-class TranslationMapper
+final class TranslationMapper
 {
     /**
      * @return array<string, mixed>

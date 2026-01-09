@@ -6,7 +6,7 @@ namespace Phpro\SuluTranslationsBundle\Domain\Events\Translation;
 
 use Phpro\SuluTranslationsBundle\Domain\Events\DomainEvent;
 
-class TranslationDeletedEvent implements DomainEvent
+final class TranslationDeletedEvent implements DomainEvent
 {
     public function __construct(
         public string $translationKey,

@@ -7,7 +7,7 @@ namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Query;
 use Phpro\SuluTranslationsBundle\Domain\Query\SearchCriteria;
 use PHPUnit\Framework\TestCase;
 
-class SearchCriteriaTest extends TestCase
+final class SearchCriteriaTest extends TestCase
 {
     private SearchCriteria $criteria;
 

@@ -9,7 +9,7 @@ use Phpro\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 
 #[Route(path: '/translations/{id}', name: 'phpro.translations_fetch', options: ['expose' => true], methods: ['GET'])]
 final class FetchController extends AbstractSecuredTranslationsController implements SecuredControllerInterface

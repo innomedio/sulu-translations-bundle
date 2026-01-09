@@ -13,7 +13,7 @@ use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Schema\SetupTranslation
 use Phpro\SuluTranslationsBundle\Tests\Functional\Doctrine\DatabaseConnectionTrait;
 use PHPUnit\Framework\TestCase;
 
-class DoctrineTranslationRepositoryTest extends TestCase
+final class DoctrineTranslationRepositoryTest extends TestCase
 {
     use DatabaseConnectionTrait;
     private DoctrineTranslationRepository $repository;

@@ -8,7 +8,7 @@ use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Time\UtcClock;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Clock\MockClock;
 
-class UtcClockTest extends TestCase
+final class UtcClockTest extends TestCase
 {
     /** @test */
     public function it_can_return_the_current_datetime(): void

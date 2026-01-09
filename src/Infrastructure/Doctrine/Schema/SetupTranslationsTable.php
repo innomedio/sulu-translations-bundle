@@ -9,6 +9,9 @@ use Doctrine\DBAL\Schema\Schema;
 use Doctrine\DBAL\Schema\Table;
 use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\DatabaseConnectionManager;
 
+/**
+ * @psalm-suppress ClassMustBeFinal - Mocked in tests
+ */
 class SetupTranslationsTable
 {
     public function __construct(

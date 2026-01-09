@@ -7,12 +7,7 @@ namespace Phpro\SuluTranslationsBundle\Domain\Query;
 final class SearchCriteria
 {
     /**
-     * @param string $searchString
      * @param array<string, mixed> $filters
-     * @param string|null $sortColumn
-     * @param string|null $sortDirection
-     * @param int $offset
-     * @param int $limit
      */
     public function __construct(
         private readonly string $searchString,

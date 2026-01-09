@@ -8,7 +8,7 @@ use Phpro\SuluTranslationsBundle\Domain\Command\ExportCommand;
 use Phpro\SuluTranslationsBundle\Domain\Command\ExportHandler;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 
 #[Route(path: '/translations/export', name: 'phpro.translations_export', options: ['expose' => true], methods: ['POST'], priority: 10)]
 final class ExportController extends AbstractSecuredTranslationsController implements SecuredControllerInterface

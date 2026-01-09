@@ -8,7 +8,7 @@ use Phpro\SuluTranslationsBundle\Domain\Serializer\TranslationSerializer;
 use Phpro\SuluTranslationsBundle\Tests\Fixtures\Translations;
 use PHPUnit\Framework\TestCase;
 
-class TranslationSerializerTest extends TestCase
+final class TranslationSerializerTest extends TestCase
 {
     /** @test */
     public function it_can_serialize_a_translation(): void
