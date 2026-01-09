@@ -7,7 +7,7 @@ namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Model;
 use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
 use PHPUnit\Framework\TestCase;
 
-class TranslationTest extends TestCase
+final class TranslationTest extends TestCase
 {
     /** @test */
     public function it_can_create_a_translation(): void

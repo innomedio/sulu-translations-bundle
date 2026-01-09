@@ -8,6 +8,9 @@ use Phpro\SuluTranslationsBundle\Domain\Command\WriteCommand;
 use Phpro\SuluTranslationsBundle\Domain\Command\WriteHandler;
 use Symfony\Component\Translation\TranslatorBagInterface;
 
+/**
+ * @psalm-suppress ClassMustBeFinal - Mocked in tests
+ */
 class Writer
 {
     public function __construct(

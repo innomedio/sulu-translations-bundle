@@ -8,7 +8,7 @@ use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
 use Phpro\SuluTranslationsBundle\Infrastructure\Doctrine\Mapper\TranslationMapper;
 use PHPUnit\Framework\TestCase;
 
-class TranslationMapperTest extends TestCase
+final class TranslationMapperTest extends TestCase
 {
     /** @test */
     public function it_can_map_to_db(): void

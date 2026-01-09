@@ -12,7 +12,7 @@ use Doctrine\DBAL\Types\Types;
 
 use function Psl\Vec\map;
 
-class TranslationTable
+final class TranslationTable
 {
     public const NAME = 'phpro_translations';
 
@@ -31,7 +31,7 @@ class TranslationTable
         return map(static::createTable()->getColumns(), function (Column $column) use ($name): string {
             return sprintf('%s.%s AS %1$s_%2$s',
                 $name,
-                $column->getName()
+                $column->getName(),
             );
         });
     }

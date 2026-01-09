@@ -7,7 +7,7 @@ namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Exception;
 use Phpro\SuluTranslationsBundle\Domain\Exception\ExportFailedException;
 use PHPUnit\Framework\TestCase;
 
-class ExportFailedExceptionTest extends TestCase
+final class ExportFailedExceptionTest extends TestCase
 {
     /**
      * @test

@@ -9,6 +9,9 @@ use Phpro\SuluTranslationsBundle\Domain\Events\Translation\TranslationUpdatedEve
 use Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
 use Phpro\SuluTranslationsBundle\Domain\Time\Clock;
 
+/**
+ * @psalm-suppress ClassMustBeFinal - Mocked in tests
+ */
 class UpdateHandler
 {
     public function __construct(

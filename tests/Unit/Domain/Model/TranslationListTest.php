@@ -9,7 +9,7 @@ use Phpro\SuluTranslationsBundle\Domain\Model\TranslationList;
 use Phpro\SuluTranslationsBundle\Tests\Fixtures\Translations;
 use PHPUnit\Framework\TestCase;
 
-class TranslationListTest extends TestCase
+final class TranslationListTest extends TestCase
 {
     private TranslationCollection $collection;
     private TranslationList $list;

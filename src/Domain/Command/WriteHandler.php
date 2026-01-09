@@ -11,6 +11,9 @@ use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
 use Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
 use Phpro\SuluTranslationsBundle\Domain\Time\Clock;
 
+/**
+ * @psalm-suppress ClassMustBeFinal - Mocked in tests
+ */
 class WriteHandler
 {
     public function __construct(

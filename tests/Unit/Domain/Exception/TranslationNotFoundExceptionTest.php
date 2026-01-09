@@ -8,7 +8,7 @@ use Phpro\SuluTranslationsBundle\Domain\Exception\TranslationNotFoundException;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-class TranslationNotFoundExceptionTest extends TestCase
+final class TranslationNotFoundExceptionTest extends TestCase
 {
     /** @test */
     public function it_make_a_translation_not_found_exception_with_id(): void

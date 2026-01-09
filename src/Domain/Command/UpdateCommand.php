@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phpro\SuluTranslationsBundle\Domain\Command;
 
-class UpdateCommand
+final class UpdateCommand
 {
     public function __construct(
         public int $id,

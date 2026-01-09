@@ -8,7 +8,7 @@ use Phpro\SuluTranslationsBundle\Domain\Model\TranslationCollection;
 use Phpro\SuluTranslationsBundle\Tests\Fixtures\Translations;
 use PHPUnit\Framework\TestCase;
 
-class TranslationCollectionTest extends TestCase
+final class TranslationCollectionTest extends TestCase
 {
     private TranslationCollection $collection;
 

@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Psr\EventDispatcher\EventDispatcherInterface;
 
-class PsrEventDispatcherTest extends TestCase
+final class PsrEventDispatcherTest extends TestCase
 {
     use ProphecyTrait;
 

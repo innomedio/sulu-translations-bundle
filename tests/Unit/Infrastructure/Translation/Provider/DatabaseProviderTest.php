@@ -14,7 +14,7 @@ use Prophecy\Prophecy\ObjectProphecy;
 use Symfony\Component\Translation\Provider\ProviderInterface;
 use Symfony\Component\Translation\TranslatorBag;
 
-class DatabaseProviderTest extends TestCase
+final class DatabaseProviderTest extends TestCase
 {
     use ProphecyTrait;
 

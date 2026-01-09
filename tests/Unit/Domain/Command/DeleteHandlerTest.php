@@ -15,7 +15,7 @@ use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 
-class DeleteHandlerTest extends TestCase
+final class DeleteHandlerTest extends TestCase
 {
     use ProphecyTrait;
 

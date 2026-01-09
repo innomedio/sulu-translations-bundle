@@ -8,6 +8,9 @@ use Phpro\SuluTranslationsBundle\Domain\Command\DeleteCommand;
 use Phpro\SuluTranslationsBundle\Domain\Command\DeleteHandler;
 use Symfony\Component\Translation\TranslatorBagInterface;
 
+/**
+ * @psalm-suppress ClassMustBeFinal - Mocked in tests
+ */
 class Remover
 {
     public function __construct(private readonly DeleteHandler $handler)

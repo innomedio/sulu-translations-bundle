@@ -13,6 +13,9 @@ use Symfony\Component\Translation\Provider\TranslationProviderCollection;
 
 use function Psl\Type\instance_of;
 
+/**
+ * @psalm-suppress ClassMustBeFinal - Mocked in tests
+ */
 class DatabaseConnectionManager
 {
     public function __construct(

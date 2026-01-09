@@ -7,7 +7,7 @@ namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Command;
 use Phpro\SuluTranslationsBundle\Domain\Command\DeleteCommand;
 use PHPUnit\Framework\TestCase;
 
-class DeleteCommandTest extends TestCase
+final class DeleteCommandTest extends TestCase
 {
     /** @test */
     public function it_can_create_a_command(): void

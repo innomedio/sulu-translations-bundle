@@ -19,7 +19,7 @@ use function Psl\Str\lowercase;
 use function Psl\Vec\map;
 use function Symfony\Component\String\u;
 
-class DoctrineTranslationRepository implements TranslationRepository
+final class DoctrineTranslationRepository implements TranslationRepository
 {
     public function __construct(
         private readonly DatabaseConnectionManager $manager,
@@ -32,7 +32,7 @@ class DoctrineTranslationRepository implements TranslationRepository
         $connection = $this->getConnection();
 
         $qb = $connection->createQueryBuilder();
-        $qb->select(TranslationTable::selectColumns())
+        $qb->select(...TranslationTable::selectColumns())
             ->from(TranslationTable::NAME)
             ->where('id = :id')
             ->setParameter('id', $id);
@@ -57,7 +57,7 @@ class DoctrineTranslationRepository implements TranslationRepository
         $connection = $this->getConnection();
 
         $qb = $connection->createQueryBuilder();
-        $qb->select(TranslationTable::selectColumns())
+        $qb->select(...TranslationTable::selectColumns())
             ->from(TranslationTable::NAME)
             ->andWhere('domain = :domain')
             ->andWhere('locale = :locale')
@@ -126,7 +126,7 @@ class DoctrineTranslationRepository implements TranslationRepository
         $connection = $this->getConnection();
 
         $qb = $connection->createQueryBuilder();
-        $qb->select(TranslationTable::selectColumns())
+        $qb->select(...TranslationTable::selectColumns())
             ->from(TranslationTable::NAME);
 
         if ($search = $criteria->searchString()) {
@@ -160,7 +160,7 @@ class DoctrineTranslationRepository implements TranslationRepository
         $connection = $this->getConnection();
 
         $qb = $connection->createQueryBuilder();
-        $qb->select(TranslationTable::selectColumns())
+        $qb->select(...TranslationTable::selectColumns())
             ->from(TranslationTable::NAME)
             ->where('translation_key = :translationKey')
             ->andWhere('domain = :domain')

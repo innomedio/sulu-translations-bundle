@@ -6,7 +6,7 @@ namespace Phpro\SuluTranslationsBundle\Tests\Fixtures;
 
 use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
 
-class Translations
+final class Translations
 {
     public static function create(?string $key = null, ?string $value = null, ?\DateTimeImmutable $createdAt = null): Translation
     {

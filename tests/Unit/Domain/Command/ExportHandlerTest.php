@@ -15,7 +15,7 @@ use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 
-class ExportHandlerTest extends TestCase
+final class ExportHandlerTest extends TestCase
 {
     use ProphecyTrait;
 

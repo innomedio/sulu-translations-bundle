@@ -6,6 +6,9 @@ namespace Phpro\SuluTranslationsBundle\Domain\Serializer;
 
 use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
 
+/**
+ * @psalm-suppress ClassMustBeFinal - Mocked in tests
+ */
 class TranslationSerializer
 {
     public function __invoke(Translation $translation): array

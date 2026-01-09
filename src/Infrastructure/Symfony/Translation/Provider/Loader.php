@@ -11,6 +11,9 @@ use Symfony\Component\Translation\TranslatorBag;
 use function Psl\Type\string;
 use function Psl\Type\vec;
 
+/**
+ * @psalm-suppress ClassMustBeFinal - Mocked in tests
+ */
 class Loader
 {
     public function __construct(private readonly TranslationRepository $repository)

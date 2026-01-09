@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 
-class FetchTranslationsTest extends TestCase
+final class FetchTranslationsTest extends TestCase
 {
     use ProphecyTrait;
 

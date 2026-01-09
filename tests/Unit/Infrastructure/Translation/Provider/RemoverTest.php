@@ -13,7 +13,7 @@ use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 
-class RemoverTest extends TestCase
+final class RemoverTest extends TestCase
 {
     use ProphecyTrait;
 

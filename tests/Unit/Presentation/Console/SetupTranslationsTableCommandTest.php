@@ -11,7 +11,7 @@ use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Symfony\Component\Console\Tester\CommandTester;
 
-class SetupTranslationsTableCommandTest extends TestCase
+final class SetupTranslationsTableCommandTest extends TestCase
 {
     use ProphecyTrait;
 

@@ -7,6 +7,9 @@ namespace Phpro\SuluTranslationsBundle\Domain\Query;
 use Phpro\SuluTranslationsBundle\Domain\Model\Translation;
 use Phpro\SuluTranslationsBundle\Domain\Repository\TranslationRepository;
 
+/**
+ * @psalm-suppress ClassMustBeFinal - Mocked in tests
+ */
 class FetchTranslation
 {
     public function __construct(

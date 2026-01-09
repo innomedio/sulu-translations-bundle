@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phpro\SuluTranslationsBundle\Domain\Command;
 
-class DeleteCommand
+final class DeleteCommand
 {
     public function __construct(
         public string $translationKey,

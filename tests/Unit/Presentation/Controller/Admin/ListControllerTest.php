@@ -19,7 +19,7 @@ use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\SerializerInterface;
 
-class ListControllerTest extends TestCase
+final class ListControllerTest extends TestCase
 {
     use ProphecyTrait;
 

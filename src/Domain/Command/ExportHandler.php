@@ -9,6 +9,9 @@ use Phpro\SuluTranslationsBundle\Domain\Events\EventDispatcher;
 use Phpro\SuluTranslationsBundle\Domain\Events\Translation\TranslationsExportedEvent;
 use Phpro\SuluTranslationsBundle\Domain\Time\Clock;
 
+/**
+ * @psalm-suppress ClassMustBeFinal - Mocked in tests
+ */
 class ExportHandler
 {
     public function __construct(

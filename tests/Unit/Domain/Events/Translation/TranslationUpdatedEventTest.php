@@ -8,7 +8,7 @@ use Phpro\SuluTranslationsBundle\Domain\Events\Translation\TranslationUpdatedEve
 use Phpro\SuluTranslationsBundle\Tests\Fixtures\Translations;
 use PHPUnit\Framework\TestCase;
 
-class TranslationUpdatedEventTest extends TestCase
+final class TranslationUpdatedEventTest extends TestCase
 {
     /** @test */
     public function it_can_create_an_event(): void

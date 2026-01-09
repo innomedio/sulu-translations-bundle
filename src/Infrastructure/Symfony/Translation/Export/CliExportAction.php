@@ -10,12 +10,8 @@ use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Provider\Dat
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 
-class CliExportAction implements ExportAction
+final class CliExportAction implements ExportAction
 {
-    /**
-     * @param string $projectDir
-     * @param string $exportFormat
-     */
     public function __construct(
         private readonly string $projectDir,
         private readonly string $exportFormat,

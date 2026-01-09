@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 
-class LoaderTest extends TestCase
+final class LoaderTest extends TestCase
 {
     use ProphecyTrait;
 

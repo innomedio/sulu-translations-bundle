@@ -10,8 +10,6 @@ interface ExportAction
 {
     /**
      * @throws ExportFailedException
-     *
-     * @return string
      */
     public function __invoke(): string;
 }

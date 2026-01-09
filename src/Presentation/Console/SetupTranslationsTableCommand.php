@@ -12,7 +12,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 #[AsCommand(name: 'phpro:sulu-translations:setup', description: 'It will update the database schema for the translations table.')]
-class SetupTranslationsTableCommand extends Command
+final class SetupTranslationsTableCommand extends Command
 {
     public function __construct(
         private readonly SetupTranslationsTable $setup,

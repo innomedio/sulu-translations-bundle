@@ -7,7 +7,7 @@ namespace Phpro\SuluTranslationsBundle\Tests\Unit\Domain\Events\Translation;
 use Phpro\SuluTranslationsBundle\Domain\Events\Translation\TranslationDeletedEvent;
 use PHPUnit\Framework\TestCase;
 
-class TranslationDeletedEventTest extends TestCase
+final class TranslationDeletedEventTest extends TestCase
 {
     /** @test */
     public function it_can_create_an_event(): void

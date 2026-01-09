@@ -8,7 +8,7 @@ use Phpro\SuluTranslationsBundle\Infrastructure\Symfony\DependencyInjection\Sulu
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class SuluTranslationsBundle extends Bundle
+final class SuluTranslationsBundle extends Bundle
 {
     public function getContainerExtension(): ExtensionInterface
     {

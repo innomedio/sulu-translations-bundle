@@ -10,7 +10,7 @@ use Psr\EventDispatcher\EventDispatcherInterface;
 
 use function Psl\Type\instance_of;
 
-class PsrEventDispatcher implements EventDispatcher
+final class PsrEventDispatcher implements EventDispatcher
 {
     public function __construct(
         private readonly EventDispatcherInterface $eventDispatcher,
