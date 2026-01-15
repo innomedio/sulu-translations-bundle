@@ -1,3 +1,8 @@
+> [!NOTE]
+> We've created this fork because the original approach for exporting translations, which relies on running `php bin/console` commands, does not work on our hosting environment. Additionally, clearing only the admin and website caches using the `cache:clear` command was not sufficient when exporting on a production environment — the HTTP cache (fos:httpcache:clear) also needed to be cleared.
+>
+> Therefore, in this fork, we run the translation export directly through the Symfony kernel, ensuring that translations are pulled correctly and that all relevant caches (admin, website, and HTTP cache) are cleared automatically.
+
 # Sulu Translations Bundle
 
 This package provides a Sulu admin panel for managing your website translations. 
