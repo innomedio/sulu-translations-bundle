@@ -4,5 +4,6 @@
   "phpro_translations.export_general_error_message": "Something went wrong during export. Please check the server logs.",
   "phpro_translations.update_general_error_message": "Something went wrong during update. Please check the server logs.",
   "phpro_translations.ai_action.humanize": "Humanize translation key",
-  "phpro_translations.unable_to_humanize_translation_key": "Unable to humanize translation key"
+  "phpro_translations.unable_to_humanize_translation_key": "Unable to humanize translation key",
+  "Manage translations": "Vertalingen"
 }
