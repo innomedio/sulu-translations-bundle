@@ -1,7 +1,8 @@
 services:
   Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Export\CliExportAction:
     arguments:
-      - '%kernel.project_dir%'
+      - '%kernel.environment%'
+      - '%kernel.debug%'
       - '%sulu_translations.export_format%'
 
   Phpro\SuluTranslationsBundle\Domain\Action\ExportAction: '@Phpro\SuluTranslationsBundle\Infrastructure\Symfony\Translation\Export\CliExportAction'
