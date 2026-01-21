@@ -35,7 +35,7 @@ final class TranslationsAdmin extends Admin
             return;
         }
 
-        $navigationItem = new NavigationItem('Manage translations');
+        $navigationItem = new NavigationItem('phpro_translations.navigation');
         $navigationItem->setPosition(100);
         $navigationItem->setView(self::LIST_VIEW);
         $navigationItemCollection->get(Admin::SETTINGS_NAVIGATION_ITEM)->addChild($navigationItem);
